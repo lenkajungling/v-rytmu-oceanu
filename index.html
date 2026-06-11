@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V rytmu oceánu — Freediving &amp; Jóga Retreat, Amed, Bali</title>
+<meta name="description" content="10 dní freedivingu, jógy a dechu na Bali. Kurz Molchanov Wave 1, tanec pod vodou, resort přímo na pláži. 5.–14. září 2026, Amed, Bali.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&family=League+Spartan:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+.rr{font-family:'League Spartan',sans-serif;color:#1a2a30;background:#f0ebe2}
+
+/* HERO */
+.rr-hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#040f14}
+.rr-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.rr-hero-overlay{position:absolute;inset:0;background:linear-gradient(170deg,rgba(4,15,20,0.05) 0%,rgba(4,15,20,0.0) 30%,rgba(4,15,20,0.75) 65%,rgba(4,15,20,1) 100%)}
+.rr-hero-content{position:relative;z-index:2;padding:3rem 2.5rem 5rem;max-width:720px;margin:0 auto;width:100%}
+.rr-hero-eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#5ab0cc;margin-bottom:2rem;font-weight:400}
+.rr-hero-title{font-family:'League Spartan',sans-serif;font-size:clamp(5.5rem,16vw,9rem);font-weight:800;line-height:0.85;color:#fff;margin-bottom:1rem;letter-spacing:-4px}
+.rr-hero-title em{display:block;font-style:italic;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(4.5rem,13vw,7.5rem);letter-spacing:-1px;color:#5ab0cc;line-height:1.05}
+.rr-hero-sub{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;font-style:italic;color:rgba(255,255,255,0.6);margin-bottom:2.5rem;line-height:1.7;max-width:440px}
+.rr-hero-meta{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:2.75rem}
+.rr-hero-date{font-size:16px;color:#fff;font-weight:500}
+.rr-hero-sep{width:1px;height:14px;background:rgba(255,255,255,0.2)}
+.rr-hero-loc{font-size:12px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase}
+.rr-btn{display:inline-block;background:#9a3e37;color:#fff;padding:1rem 2.75rem;border-radius:50px;font-size:13px;letter-spacing:2px;text-decoration:none;font-weight:700;text-transform:uppercase;border:none;cursor:pointer;font-family:'League Spartan',sans-serif;transition:background 0.2s}
+.rr-btn:hover{background:#c4726a}
+
+/* SECTIONS */
+.rr-section{padding:5rem 2.5rem}
+.rr-section.sand{background:#f0ebe2}
+.rr-section.white{background:#fff}
+.rr-section.deep{background:#040f14}
+.rr-section.mid{background:#0c3d52}
+.rr-inner{max-width:700px;margin:0 auto}
+.rr-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#9a3e37;margin-bottom:1.25rem;font-weight:600;display:block}
+.rr-label.light{color:#5ab0cc}
+.rr-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,6vw,3.8rem);font-weight:400;line-height:1.1;margin-bottom:1.75rem;color:#061c28}
+.rr-h2 em{font-style:italic;color:#9a3e37}
+.rr-h2.light{color:#fff}
+.rr-h2.light em{color:#5ab0cc}
+.rr-divider{width:50px;height:2px;background:#9a3e37;margin:1.75rem 0;border-radius:2px}
+.rr-body{font-size:17px;color:#3d5a65;line-height:1.9;font-weight:300}
+.rr-body.light{color:rgba(255,255,255,0.68)}
+.rr-body p+p{margin-top:1.25rem}
+
+/* FOTO */
+.rr-photo{width:100%;display:block;object-fit:cover}
+.rr-photo.h500{height:500px;object-position:center 30%}
+.rr-photo.h400{height:400px;object-position:center}
+
+/* ŠTÍTKY */
+.rr-tags{display:flex;flex-wrap:wrap;gap:0.65rem;padding:1.75rem 2.5rem;background:#f0ebe2}
+.rr-tag{padding:0.6rem 1.35rem;border-radius:30px;font-size:14px;font-weight:500}
+.rr-tag.ocean{background:#0c3d52;color:#5ab0cc}
+.rr-tag.terra{background:#9a3e37;color:#f5ede8}
+.rr-tag.sand{background:#e8ddd0;color:#5a3e30}
+
+/* SPLIT */
+.rr-split{display:grid;grid-template-columns:1fr 1fr;min-height:460px}
+.rr-split-img{object-fit:cover;width:100%;height:100%;display:block}
+.rr-split-text{padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center;background:#040f14}
+
+/* PROGRAM */
+.rr-program-grid{display:grid;gap:1rem;margin-top:2rem}
+.rr-program-item{display:flex;align-items:flex-start;gap:1.5rem;padding:1.5rem 1.75rem;background:rgba(255,255,255,0.04);border-radius:16px;border-left:3px solid #5ab0cc}
+.rr-program-day{font-size:11px;color:#5ab0cc;letter-spacing:1px;text-transform:uppercase;font-weight:700;min-width:65px;padding-top:4px;flex-shrink:0}
+.rr-program-desc{font-size:16px;color:rgba(255,255,255,0.78);line-height:1.8}
+.rr-program-desc strong{color:#fff;font-weight:700;display:block;margin-bottom:0.3rem;font-size:17px}
+
+/* GALERIE */
+.rr-gallery{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;background:#040f14}
+.rr-gi{overflow:hidden;position:relative}
+.rr-gi img{width:100%;height:100%;object-fit:cover;display:block}
+.rr-gi.wide{grid-column:span 2;aspect-ratio:16/7}
+.rr-gi.sq{aspect-ratio:1/1}
+.rr-gi.land{aspect-ratio:4/3}
+
+/* QUOTE */
+.rr-quote{padding:4.5rem 2.5rem;background:#9a3e37;text-align:center}
+.rr-quote p{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:300;font-style:italic;color:#fff;max-width:580px;margin:0 auto;line-height:1.6}
+
+/* INCLUDED */
+.rr-included-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.5rem;margin-top:2rem}
+.rr-included-item{display:flex;align-items:center;gap:1rem;font-size:16px;color:#3d5a65;padding:0.5rem 0;font-weight:400}
+.rr-included-item::before{content:'';width:7px;height:7px;border-radius:50%;background:#9a3e37;flex-shrink:0}
+.rr-not-included{margin-top:1.75rem;padding:1.25rem 1.5rem;background:#f0ebe2;border-radius:12px;font-size:15px;color:#6b8c99;line-height:1.8}
+.rr-not-included strong{color:#3d5a65;font-weight:600}
+
+/* LEKTORKA */
+.rr-lektorka-wrap{display:grid;grid-template-columns:400px 1fr;min-height:620px}
+.rr-lektorka-img{object-fit:cover;width:100%;height:100%;display:block;object-position:center top}
+.rr-lektorka-text-wrap{padding:4rem 3rem;background:#f0ebe2;display:flex;flex-direction:column;justify-content:center}
+.rr-credentials{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.75rem}
+.rr-credential{background:#0c3d52;color:#5ab0cc;padding:0.4rem 1rem;border-radius:30px;font-size:12px;letter-spacing:0.5px;font-weight:500}
+
+/* PRICING */
+.rr-price-card{background:rgba(255,255,255,0.05);border:0.5px solid rgba(90,176,204,0.2);border-radius:16px;padding:2rem;margin:2rem 0}
+.rr-price-num{font-family:'League Spartan',sans-serif;font-size:clamp(3.5rem,9vw,5rem);font-weight:800;color:#fff;line-height:1;letter-spacing:-2px}
+.rr-price-per{font-size:15px;color:rgba(255,255,255,0.35);margin-top:0.25rem;margin-bottom:0.5rem}
+.rr-price-cap{font-size:14px;color:#5ab0cc;margin-bottom:1.75rem}
+.rr-price-rows{border-top:0.5px solid rgba(255,255,255,0.07);padding-top:1.25rem}
+.rr-price-row{display:flex;justify-content:space-between;padding:0.4rem 0;font-size:15px;color:rgba(255,255,255,0.58);border-bottom:0.5px solid rgba(255,255,255,0.04)}
+.rr-price-row:last-child{border-bottom:none}
+.rr-price-row span:last-child{color:#fff;font-weight:500}
+.rr-price-row.dim{opacity:0.28}
+
+/* FORM */
+.rr-form{margin-top:2.5rem;display:grid;gap:1rem}
+.rr-form-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#5ab0cc;margin-bottom:0.4rem;display:block;font-weight:600}
+.rr-form-input,.rr-form-select,.rr-form-textarea{width:100%;background:rgba(255,255,255,0.06);border:0.5px solid rgba(90,176,204,0.25);border-radius:10px;padding:0.9rem 1.1rem;font-size:16px;color:#fff;font-family:'League Spartan',sans-serif;outline:none;transition:border-color 0.2s}
+.rr-form-input:focus,.rr-form-select:focus,.rr-form-textarea:focus{border-color:rgba(90,176,204,0.6)}
+.rr-form-textarea{min-height:120px;resize:vertical}
+.rr-form-select{color:rgba(255,255,255,0.6)}
+.rr-gdpr{display:flex;align-items:flex-start;gap:0.75rem;padding:0.5rem 0}
+.rr-gdpr input{margin-top:3px;accent-color:#9a3e37;flex-shrink:0;width:16px;height:16px}
+.rr-gdpr-label{font-size:13px;color:rgba(255,255,255,0.38);line-height:1.6}
+.rr-gdpr-label a{color:#5ab0cc;text-decoration:underline}
+.rr-form-cta{text-align:center;padding-top:0.5rem}
+.rr-form-note{font-size:13px;color:rgba(255,255,255,0.22);margin-top:0.75rem}
+
+/* FAQ */
+.rr-faq-item{border-bottom:0.5px solid rgba(255,255,255,0.07);padding:1.5rem 0}
+.rr-faq-item:first-child{border-top:0.5px solid rgba(255,255,255,0.07)}
+.rr-faq-q{font-size:17px;font-weight:600;color:#fff;margin-bottom:0.6rem}
+.rr-faq-a{font-size:16px;color:rgba(255,255,255,0.55);line-height:1.8;font-weight:300}
+
+/* FOOTER */
+.rr-footer{background:#040f14;padding:3rem 2rem;text-align:center}
+.rr-footer-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-style:italic;color:rgba(255,255,255,0.35);margin-bottom:1rem;font-weight:300}
+.rr-footer-links{font-size:14px;color:rgba(255,255,255,0.28);letter-spacing:0.5px;line-height:2.2}
+.rr-footer-links a{color:#5ab0cc;text-decoration:none}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+  .rr-split{grid-template-columns:1fr}
+  .rr-split-img{height:300px}
+  .rr-lektorka-wrap{grid-template-columns:1fr}
+  .rr-lektorka-img{height:420px}
+  .rr-gallery{grid-template-columns:1fr 1fr}
+  .rr-gi.wide{grid-column:span 2}
+  .rr-hero-title{font-size:4.5rem;letter-spacing:-2px}
+  .rr-hero-title em{font-size:3.8rem}
+}
+</style>
+</head>
+<body>
+<div class="rr">
+
+<!-- HERO -->
+<div class="rr-hero">
+  <img class="rr-hero-img" src="images/IMG_4267.jpg" alt="Tanec pod vodou — freediver mezi korálovými útesy">
+  <div class="rr-hero-overlay"></div>
+  <div class="rr-hero-content">
+    <p class="rr-hero-eyebrow">Freediving &amp; Jóga · Amed, Bali</p>
+    <h1 class="rr-hero-title">V rytmu<em>oceánu</em></h1>
+    <p class="rr-hero-sub">10 dní, které tě naučí dýchat, potápět se a vrátit se k sobě</p>
+    <div class="rr-hero-meta">
+      <span class="rr-hero-date">5. — 14. září 2026</span>
+      <span class="rr-hero-sep"></span>
+      <span class="rr-hero-loc">Amed, Bali</span>
+    </div>
+    <a href="#rezervace" class="rr-btn">Chci se přihlásit</a>
+  </div>
+</div>
+
+<!-- O RETREATU -->
+<div class="rr-section sand">
+  <div class="rr-inner">
+    <span class="rr-label">O retreatu</span>
+    <h2 class="rr-h2">Tady je ještě<br><em>svět v pořádku.</em></h2>
+    <div class="rr-divider"></div>
+    <div class="rr-body">
+      <p>Amed je tichá rybářská vesnice na východním pobřeží Bali. Pomalé tempo, živé korálové útesy, průzračná voda a vrak japonské lodi z druhé světové války hned u pobřeží. Nikdo si tady na nic nehraje — a to je přesně ten důvod, proč jsme si vybrali právě toto místo.</p>
+      <p>Deset dní budeš každý den dýchat, pohybovat se a ponořovat — do vody i do sebe. Absolvuješ mezinárodně certifikovaný kurz Molchanov Wave 1, každodenní praxi jógy a dechu a tančení pod vodou. Program je plný, ale záměrně — protože i odpočinek je součástí retreatu, ne mezera v rozvrhu.</p>
+    </div>
+  </div>
+</div>
+
+<!-- AMED FOTO + ŠTÍTKY -->
+<img class="rr-photo h500" src="images/amed.jpg" alt="Amed při západu slunce, Bali">
+<div class="rr-tags">
+  <span class="rr-tag ocean">🤿 Molchanov Wave 1</span>
+  <span class="rr-tag ocean">🧘 Jóga každý den</span>
+  <span class="rr-tag ocean">🌬️ Dech každý den</span>
+  <span class="rr-tag terra">💃 Tanec pod vodou</span>
+  <span class="rr-tag terra">🌊 Resort přímo na pláži</span>
+  <span class="rr-tag terra">🐠 Zažij Bali jinak</span>
+  <span class="rr-tag sand">📍 Amed, Bali</span>
+  <span class="rr-tag sand">📅 5.–14. září 2026</span>
+  <span class="rr-tag sand">👥 6–10 lidí</span>
+</div>
+
+<!-- FREEDIVING ŠKOLA — SPLIT -->
+<div class="rr-split">
+  <img class="rr-split-img" src="images/SNYD2274.jpg" alt="Freediving Amed škola">
+  <div class="rr-split-text">
+    <span class="rr-label light">Partner retreatu</span>
+    <h2 class="rr-h2 light">Freediving <em>Amed</em></h2>
+    <p class="rr-body light">Retreat pořádám ve spolupráci s profesionální freedivingovou školou přímo v Amedu. Jejich instruktoři vedou kurz Wave 1 — já se starám o jógu, dech a celkový kontext retreatu. Dohromady tvoříme tým, který tě provede od prvního nádechu až po volný ponor.</p>
+  </div>
+</div>
+
+<!-- PROGRAM -->
+<div class="rr-section deep">
+  <div class="rr-inner">
+    <span class="rr-label light">Program</span>
+    <h2 class="rr-h2 light">Co tě <em>čeká</em></h2>
+    <div class="rr-program-grid">
+      <div class="rr-program-item">
+        <span class="rr-program-day">Den 1</span>
+        <span class="rr-program-desc"><strong>Příjezd &amp; uvítací rituál</strong>Přivítání, balijský uvítací obřad, první společná praxe dechu a uvedení do prostoru</span>
+      </div>
+      <div class="rr-program-item">
+        <span class="rr-program-day">Dny 2–4</span>
+        <span class="rr-program-desc"><strong>Kurz Molchanov Wave 1</strong>Teorie freedivingu, bazénové techniky, ponory v otevřeném moři, statická apnea, záchrana freedivera. Každé ráno jóga.</span>
+      </div>
+      <div class="rr-program-item">
+        <span class="rr-program-day">Dny 5–7</span>
+        <span class="rr-program-desc"><strong>Praxe &amp; zážitky</strong>Ranní jóga a dech, tanec pod vodou, šnorchování u vraku japonské lodi, výlet Lahangan Sweet a balijský chrám</span>
+      </div>
+      <div class="rr-program-item">
+        <span class="rr-program-day">Den 8</span>
+        <span class="rr-program-desc"><strong>Manty na Nusa Penidě</strong>Celodenní výlet za rejnoky manta, snorkeling v čistých vodách</span>
+      </div>
+      <div class="rr-program-item">
+        <span class="rr-program-day">Dny 9–10</span>
+        <span class="rr-program-desc"><strong>Integrace &amp; rozloučení</strong>Volné ponory, závěrečná praxe, ukončující kruh a rituál. Odjedeš s certifikátem a novou vrstvou sebe.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRAM FOTKY -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#040f14">
+  <img src="images/instructorfreedivingcourse.jpg" alt="Kurz freedivingu v moři" style="height:400px;object-fit:cover;width:100%;display:block">
+  <img src="images/SNYD2455.jpg" alt="Výuka freedivingu v bazénu" style="height:400px;object-fit:cover;width:100%;display:block">
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#040f14;margin-top:4px">
+  <img src="images/AmedAsana2.jpg" alt="Jóga ve shale s výhledem na moře" style="height:380px;object-fit:cover;width:100%;display:block">
+  <img src="images/SNYD3039.jpg" alt="Jóga na terase nad mořem" style="height:380px;object-fit:cover;width:100%;display:block">
+</div>
+
+<!-- QUOTE -->
+<div class="rr-quote">
+  <p>„Svoboda pod vodou začíná tam, kde končí potřeba mít vše pod kontrolou."</p>
+</div>
+
+<!-- CO JE V CENĚ -->
+<div class="rr-section white">
+  <div class="rr-inner">
+    <span class="rr-label">Co je v ceně</span>
+    <h2 class="rr-h2">Všechno, co <em>potřebuješ</em></h2>
+    <div class="rr-included-grid">
+      <div class="rr-included-item">Ubytování 9 nocí se snídaní</div>
+      <div class="rr-included-item">Kurz Molchanov Wave 1 + certifikace</div>
+      <div class="rr-included-item">Každodenní lekce jógy</div>
+      <div class="rr-included-item">Každodenní lekce dechu</div>
+      <div class="rr-included-item">Tanec pod vodou</div>
+      <div class="rr-included-item">Transfer letiště → resort → letiště</div>
+      <div class="rr-included-item">Pronájem shaly pro lekce</div>
+      <div class="rr-included-item">Uvítací &amp; ukončující rituál</div>
+    </div>
+    <div class="rr-not-included"><strong>Není v ceně:</strong> letenky, cestovní pojištění, vízum, výlety (Nusa Penida, okolí Amedu) — výlety zorganizuji, platíš na místě individuálně.</div>
+  </div>
+</div>
+
+<!-- GALERIE -->
+<div class="rr-gallery">
+  <div class="rr-gi wide"><img src="images/IMG_4267.jpg" alt="Tanec pod vodou"></div>
+  <div class="rr-gi sq"><img src="images/1745833473262.jpg" alt="Freediver silueta se sluncem"></div>
+  <div class="rr-gi sq"><img src="images/1745833473200.jpg" alt="Vzduchový kruh pod vodou"></div>
+  <div class="rr-gi land"><img src="images/FreediveAmed-4.jpg" alt="Freediving na laně"></div>
+  <div class="rr-gi land"><img src="images/IMG_8374.jpg" alt="Freediving v Amedu"></div>
+  <div class="rr-gi sq"><img src="images/YogaAndDog.jpg" alt="Jóga se psem"></div>
+</div>
+
+<!-- LEKTORKA -->
+<div class="rr-lektorka-wrap">
+  <img class="rr-lektorka-img" src="images/SunsetYogaDive-Photo-5.jpg" alt="Lenka Rekha — průvodkyně retreatu">
+  <div class="rr-lektorka-text-wrap">
+    <span class="rr-label">Tvá průvodkyně</span>
+    <h2 class="rr-h2">Lenka <em>Rekha</em></h2>
+    <div class="rr-divider"></div>
+    <div class="rr-body">
+      <p>Skoro deset let učím jógu. Učila jsem se jógovou terapii od Sonal Chaudhari, studentky Kobada Variavy — přímého žáka B.K.S. Iyengara. Celý život tančím a kreativní pohyb je mi stejně blízký jako ticho na podložce.</p>
+      <p>Význam dechu jsem si naplno uvědomila až s freedivingem. Kvalita bytí pod hladinou je přímo úměrná tomu, jak klidná jsi na hladině — a tohle platí daleko za hranice vody. Skoro před třemi lety jsem se ocitla v těžkém období svého života. Freediving na Filipínách mi pomohl najít cestu zpátky k sobě samé. Od té doby ho neoddělitelně propojuji s prací s dechem — ve vodě i na souši.</p>
+      <p>Tanec pod vodou pro mě není disciplína. Je to nejpřirozenější vyjádření toho, co se děje uvnitř, když se konečně uvolníš.</p>
+      <p>Vím, jak chutná hloubka — fyzická i ta vnitřní. A vím, že nejkrásnější okamžiky pod vodou přicházejí tehdy, když přestaneš mít vše pod kontrolou a uvolníš se.</p>
+    </div>
+    <div class="rr-credentials">
+      <span class="rr-credential">AIDA 4</span>
+      <span class="rr-credential">~10 let jógy</span>
+      <span class="rr-credential">Jógová terapie</span>
+      <span class="rr-credential">Iyengar inspirace</span>
+      <span class="rr-credential">Intuitivní masáž</span>
+      <span class="rr-credential">Tanečnice</span>
+      <span class="rr-credential">Breath guide</span>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING + FORM -->
+<div class="rr-section deep" id="rezervace">
+  <div class="rr-inner">
+    <span class="rr-label light">Investice</span>
+    <div class="rr-price-card">
+      <div class="rr-price-num">38 000 Kč</div>
+      <div class="rr-price-per">na osobu</div>
+      <div class="rr-price-cap">Kapacita min. 6 · max. 10 míst</div>
+      <div class="rr-price-rows">
+        <div class="rr-price-row"><span>Ubytování 9 nocí se snídaní</span><span>✓</span></div>
+        <div class="rr-price-row"><span>Kurz Molchanov Wave 1 + certifikace</span><span>✓</span></div>
+        <div class="rr-price-row"><span>Lekce jógy a dechu každý den</span><span>✓</span></div>
+        <div class="rr-price-row"><span>Tanec pod vodou</span><span>✓</span></div>
+        <div class="rr-price-row"><span>Transfer z/na letiště</span><span>✓</span></div>
+        <div class="rr-price-row"><span>Pronájem shaly + rituály</span><span>✓</span></div>
+        <div class="rr-price-row dim"><span>Letenky, vízum, pojištění</span><span>není v ceně</span></div>
+        <div class="rr-price-row dim"><span>Výlety (Nusa Penida, okolí)</span><span>není v ceně</span></div>
+      </div>
+    </div>
+
+    <span class="rr-label light" style="margin-top:2.5rem">Rezervovat místo</span>
+    <p style="font-size:16px;color:rgba(255,255,255,0.45);margin-bottom:1rem;font-weight:300">Záloha 40 % při rezervaci · zbývající platba do 1. 8. 2026</p>
+
+    <form class="rr-form" action="https://formspree.io/f/VLOZ-SVE-ID" method="POST">
+      <div>
+        <label class="rr-form-label" for="name">Jméno a příjmení *</label>
+        <input class="rr-form-input" type="text" id="name" name="name" placeholder="Tvoje jméno" required>
+      </div>
+      <div>
+        <label class="rr-form-label" for="email">E-mail *</label>
+        <input class="rr-form-input" type="email" id="email" name="email" placeholder="tvuj@email.cz" required>
+      </div>
+      <div>
+        <label class="rr-form-label" for="phone">Telefon</label>
+        <input class="rr-form-input" type="tel" id="phone" name="phone" placeholder="+420">
+      </div>
+      <div>
+        <label class="rr-form-label" for="travel">Cestuješ</label>
+        <select class="rr-form-select" id="travel" name="travel">
+          <option>Sama/sám</option>
+          <option>Ve dvou (pár)</option>
+          <option>S kamarádem/kamarádkou</option>
+        </select>
+      </div>
+      <div>
+        <label class="rr-form-label" for="message">Zpráva / otázky</label>
+        <textarea class="rr-form-textarea" id="message" name="message" placeholder="Něco o sobě, otázky..."></textarea>
+      </div>
+      <div class="rr-gdpr">
+        <input type="checkbox" id="gdpr" name="gdpr" required>
+        <label class="rr-gdpr-label" for="gdpr">Souhlasím se zpracováním osobních údajů za účelem vyřízení rezervace. Údaje nebudou předány třetím stranám. <a href="gdpr.html">Zásady ochrany osobních údajů.</a></label>
+      </div>
+      <div class="rr-form-cta">
+        <button type="submit" class="rr-btn">Chci rezervovat místo →</button>
+        <p class="rr-form-note">Ozvu se ti do 48 hodin s dalšími kroky.</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="rr-section mid">
+  <div class="rr-inner">
+    <span class="rr-label light">Otázky</span>
+    <h2 class="rr-h2 light">Časté <em>dotazy</em></h2>
+    <div class="rr-faq-item"><p class="rr-faq-q">Pro koho je retreat?</p><p class="rr-faq-a">Pro muže, ženy i páry. Nemusíš mít zkušenosti s jógou ani s freedivingem — potřebuješ odhodlání a vztah k vodě.</p></div>
+    <div class="rr-faq-item"><p class="rr-faq-q">Musím umět plavat?</p><p class="rr-faq-a">Ano, podmínkou kurzu Wave 1 je zvládnout uplavat 200 metrů bez přestávky. Styl plavání není předepsán.</p></div>
+    <div class="rr-faq-item"><p class="rr-faq-q">Jak se dostanu na Bali?</p><p class="rr-faq-a">Poletíme společně — domluvíme se na termínu a trase, aby nám to vyšlo. Nejčastěji přes Dubaj, celková doba letu je cca 15 hodin. Letenky si zajišťuje každý sám.</p></div>
+    <div class="rr-faq-item"><p class="rr-faq-q">Co když se retreat neuskuteční?</p><p class="rr-faq-a">Retreat se koná při minimálně 6 přihlášených. Pokud tento počet nedosáhneme, zálohu plně vrátím.</p></div>
+    <div class="rr-faq-item"><p class="rr-faq-q">Jsou výlety povinné?</p><p class="rr-faq-a">Ne, výlety jsou dobrovolné a platí se na místě. Zorganizuji je pro zájemce — ty se pak rozhodneš, čeho se chceš zúčastnit.</p></div>
+    <div class="rr-faq-item"><p class="rr-faq-q">Jaké ubytování je v ceně?</p><p class="rr-faq-a">Resort přímo na pláži v Amedu, vlastní pokoj se snídaní. Pokud cestuješ sama/sám, dej mi vědět — domluvíme se na řešení.</p></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="rr-footer">
+  <div class="rr-footer-title">Rekha Yoga</div>
+  <div class="rr-footer-links">
+    <a href="https://rekhayoga.cz">rekhayoga.cz</a> &nbsp;·&nbsp;
+    <a href="mailto:lenka.jungling@gmail.com">lenka.jungling@gmail.com</a> &nbsp;·&nbsp;
+    IG: <a href="https://instagram.com/rekha_yoga_" target="_blank">@rekha_yoga_</a><br>
+    V rytmu oceánu · Amed, Bali · 5.–14. 9. 2026
+  </div>
+</div>
+
+</div>
+</body>
+</html>
