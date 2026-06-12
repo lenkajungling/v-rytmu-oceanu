@@ -48,9 +48,7 @@ html{scroll-behavior:smooth}
 .rr-body p+p{margin-top:1.25rem}
 
 /* FOTO */
-.rr-photo{width:100%;display:block;object-fit:cover}
-.rr-photo.h500{height:500px;object-position:center 30%}
-.rr-photo.h400{height:400px;object-position:center}
+.rr-photo-full{width:100%;display:block;object-fit:cover;height:520px;object-position:center 30%}
 
 /* ŠTÍTKY */
 .rr-tags{display:flex;flex-wrap:wrap;gap:0.65rem;padding:1.75rem 2.5rem;background:#f0ebe2}
@@ -60,9 +58,13 @@ html{scroll-behavior:smooth}
 .rr-tag.sand{background:#e8ddd0;color:#5a3e30}
 
 /* SPLIT */
-.rr-split{display:grid;grid-template-columns:1fr 1fr;min-height:460px}
+.rr-split{display:grid;grid-template-columns:1fr 1fr;min-height:480px}
 .rr-split-img{object-fit:cover;width:100%;height:100%;display:block}
 .rr-split-text{padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center;background:#040f14}
+
+/* DVĚ FOTKY VEDLE SEBE */
+.rr-duo{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#040f14}
+.rr-duo img{width:100%;height:420px;object-fit:cover;display:block}
 
 /* PROGRAM */
 .rr-program-grid{display:grid;gap:1rem;margin-top:2rem}
@@ -70,14 +72,6 @@ html{scroll-behavior:smooth}
 .rr-program-day{font-size:11px;color:#5ab0cc;letter-spacing:1px;text-transform:uppercase;font-weight:700;min-width:65px;padding-top:4px;flex-shrink:0}
 .rr-program-desc{font-size:16px;color:rgba(255,255,255,0.78);line-height:1.8}
 .rr-program-desc strong{color:#fff;font-weight:700;display:block;margin-bottom:0.3rem;font-size:17px}
-
-/* GALERIE */
-.rr-gallery{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;background:#040f14}
-.rr-gi{overflow:hidden;position:relative}
-.rr-gi img{width:100%;height:100%;object-fit:cover;display:block}
-.rr-gi.wide{grid-column:span 2;aspect-ratio:16/7}
-.rr-gi.sq{aspect-ratio:1/1}
-.rr-gi.land{aspect-ratio:4/3}
 
 /* QUOTE */
 .rr-quote{padding:4.5rem 2.5rem;background:#9a3e37;text-align:center}
@@ -91,7 +85,7 @@ html{scroll-behavior:smooth}
 .rr-not-included strong{color:#3d5a65;font-weight:600}
 
 /* LEKTORKA */
-.rr-lektorka-wrap{display:grid;grid-template-columns:400px 1fr;min-height:620px}
+.rr-lektorka-wrap{display:grid;grid-template-columns:420px 1fr;min-height:620px}
 .rr-lektorka-img{object-fit:cover;width:100%;height:100%;display:block;object-position:center top}
 .rr-lektorka-text-wrap{padding:4rem 3rem;background:#f0ebe2;display:flex;flex-direction:column;justify-content:center}
 .rr-credentials{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.75rem}
@@ -140,17 +134,18 @@ html{scroll-behavior:smooth}
   .rr-split-img{height:300px}
   .rr-lektorka-wrap{grid-template-columns:1fr}
   .rr-lektorka-img{height:420px}
-  .rr-gallery{grid-template-columns:1fr 1fr}
-  .rr-gi.wide{grid-column:span 2}
+  .rr-duo{grid-template-columns:1fr}
+  .rr-duo img{height:300px}
   .rr-hero-title{font-size:4.5rem;letter-spacing:-2px}
   .rr-hero-title em{font-size:3.8rem}
+  .rr-photo-full{height:320px}
 }
 </style>
 </head>
 <body>
 <div class="rr">
 
-<!-- HERO -->
+<!-- HERO — úvodní fotka -->
 <div class="rr-hero">
   <img class="rr-hero-img" src="images/IMG_4267.jpg" alt="Tanec pod vodou — freediver mezi korálovými útesy">
   <div class="rr-hero-overlay"></div>
@@ -180,8 +175,8 @@ html{scroll-behavior:smooth}
   </div>
 </div>
 
-<!-- AMED FOTO + ŠTÍTKY -->
-<img class="rr-photo h500" src="images/amed.jpg" alt="Amed při západu slunce, Bali">
+<!-- AMED PŘI ZÁPADU SLUNCE -->
+<img class="rr-photo-full" src="images/amed.jpg" alt="Amed při západu slunce, Bali">
 <div class="rr-tags">
   <span class="rr-tag ocean">🤿 Molchanov Wave 1</span>
   <span class="rr-tag ocean">🧘 Jóga každý den</span>
@@ -194,7 +189,7 @@ html{scroll-behavior:smooth}
   <span class="rr-tag sand">👥 6–10 lidí</span>
 </div>
 
-<!-- FREEDIVING ŠKOLA — SPLIT -->
+<!-- FREEDIVING AMED — SPLIT -->
 <div class="rr-split">
   <img class="rr-split-img" src="images/SNYD2274.jpg" alt="Freediving Amed škola">
   <div class="rr-split-text">
@@ -234,14 +229,10 @@ html{scroll-behavior:smooth}
   </div>
 </div>
 
-<!-- PROGRAM FOTKY -->
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#040f14">
-  <img src="images/instructorfreedivingcourse.jpg" alt="Kurz freedivingu v moři" style="height:400px;object-fit:cover;width:100%;display:block">
-  <img src="images/SNYD2455.jpg" alt="Výuka freedivingu v bazénu" style="height:400px;object-fit:cover;width:100%;display:block">
-</div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#040f14;margin-top:4px">
-  <img src="images/AmedAsana2.jpg" alt="Jóga ve shale s výhledem na moře" style="height:380px;object-fit:cover;width:100%;display:block">
-  <img src="images/SNYD3039.jpg" alt="Jóga na terase nad mořem" style="height:380px;object-fit:cover;width:100%;display:block">
+<!-- POD PROGRAMEM: jóga ve shale + jóga se psem -->
+<div class="rr-duo">
+  <img src="images/AmedAsana2.jpg" alt="Jóga ve shale s výhledem na moře">
+  <img src="images/YogaAndDog.jpg" alt="Jóga se psem">
 </div>
 
 <!-- QUOTE -->
@@ -268,17 +259,13 @@ html{scroll-behavior:smooth}
   </div>
 </div>
 
-<!-- GALERIE -->
-<div class="rr-gallery">
-  <div class="rr-gi wide"><img src="images/IMG_4267.jpg" alt="Tanec pod vodou"></div>
-  <div class="rr-gi sq"><img src="images/1745833473262.jpg" alt="Freediver silueta se sluncem"></div>
-  <div class="rr-gi sq"><img src="images/1745833473200.jpg" alt="Vzduchový kruh pod vodou"></div>
-  <div class="rr-gi land"><img src="images/FreediveAmed-4.jpg" alt="Freediving na laně"></div>
-  <div class="rr-gi land"><img src="images/IMG_8374.jpg" alt="Freediving v Amedu"></div>
-  <div class="rr-gi sq"><img src="images/YogaAndDog.jpg" alt="Jóga se psem"></div>
+<!-- POD CO JE V CENĚ: bazén + silueta freedivera -->
+<div class="rr-duo">
+  <img src="images/SNYD2455.jpg" alt="Výuka freedivingu v bazénu">
+  <img src="images/1745833473262.jpg" alt="Freediver silueta se sluncem" style="object-position:center center">
 </div>
 
-<!-- LEKTORKA -->
+<!-- LEKTORKA — jedna fotka -->
 <div class="rr-lektorka-wrap">
   <img class="rr-lektorka-img" src="images/SunsetYogaDive-Photo-5.jpg" alt="Lenka Rekha — průvodkyně retreatu">
   <div class="rr-lektorka-text-wrap">
