@@ -13,7 +13,6 @@
 html{scroll-behavior:smooth}
 .rr{font-family:'League Spartan',sans-serif;color:#1a2a30;background:#f0ebe2}
 
-/* HERO */
 .rr-hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#040f14}
 .rr-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
 .rr-hero-overlay{position:absolute;inset:0;background:linear-gradient(170deg,rgba(4,15,20,0.05) 0%,rgba(4,15,20,0.0) 30%,rgba(4,15,20,0.75) 65%,rgba(4,15,20,1) 100%)}
@@ -29,7 +28,6 @@ html{scroll-behavior:smooth}
 .rr-btn{display:inline-block;background:#9a3e37;color:#fff;padding:1rem 2.75rem;border-radius:50px;font-size:13px;letter-spacing:2px;text-decoration:none;font-weight:700;text-transform:uppercase;border:none;cursor:pointer;font-family:'League Spartan',sans-serif;transition:background 0.2s}
 .rr-btn:hover{background:#c4726a}
 
-/* SECTIONS */
 .rr-section{padding:5rem 2.5rem}
 .rr-section.sand{background:#f0ebe2}
 .rr-section.white{background:#fff}
@@ -47,51 +45,42 @@ html{scroll-behavior:smooth}
 .rr-body.light{color:rgba(255,255,255,0.68)}
 .rr-body p+p{margin-top:1.25rem}
 
-/* FOTO */
 .rr-photo-full{width:100%;display:block;object-fit:cover;height:520px;object-position:center 30%}
 
-/* ŠTÍTKY */
 .rr-tags{display:flex;flex-wrap:wrap;gap:0.65rem;padding:1.75rem 2.5rem;background:#f0ebe2}
 .rr-tag{padding:0.6rem 1.35rem;border-radius:30px;font-size:14px;font-weight:500}
 .rr-tag.ocean{background:#0c3d52;color:#5ab0cc}
 .rr-tag.terra{background:#9a3e37;color:#f5ede8}
 .rr-tag.sand{background:#e8ddd0;color:#5a3e30}
 
-/* SPLIT */
 .rr-split{display:grid;grid-template-columns:1fr 1fr;min-height:480px}
 .rr-split-img{object-fit:cover;width:100%;height:100%;display:block}
 .rr-split-text{padding:4rem 3rem;display:flex;flex-direction:column;justify-content:center;background:#040f14}
 
-/* DVĚ FOTKY VEDLE SEBE */
-.rr-duo{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#040f14}
-.rr-duo img{width:100%;height:420px;object-fit:cover;display:block}
+.rr-trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;background:#040f14}
+.rr-trio img{width:100%;height:380px;object-fit:cover;display:block}
 
-/* PROGRAM */
 .rr-program-grid{display:grid;gap:1rem;margin-top:2rem}
 .rr-program-item{display:flex;align-items:flex-start;gap:1.5rem;padding:1.5rem 1.75rem;background:rgba(255,255,255,0.04);border-radius:16px;border-left:3px solid #5ab0cc}
 .rr-program-day{font-size:11px;color:#5ab0cc;letter-spacing:1px;text-transform:uppercase;font-weight:700;min-width:65px;padding-top:4px;flex-shrink:0}
 .rr-program-desc{font-size:16px;color:rgba(255,255,255,0.78);line-height:1.8}
 .rr-program-desc strong{color:#fff;font-weight:700;display:block;margin-bottom:0.3rem;font-size:17px}
 
-/* QUOTE */
 .rr-quote{padding:4.5rem 2.5rem;background:#9a3e37;text-align:center}
 .rr-quote p{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:300;font-style:italic;color:#fff;max-width:580px;margin:0 auto;line-height:1.6}
 
-/* INCLUDED */
 .rr-included-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.5rem;margin-top:2rem}
 .rr-included-item{display:flex;align-items:center;gap:1rem;font-size:16px;color:#3d5a65;padding:0.5rem 0;font-weight:400}
 .rr-included-item::before{content:'';width:7px;height:7px;border-radius:50%;background:#9a3e37;flex-shrink:0}
 .rr-not-included{margin-top:1.75rem;padding:1.25rem 1.5rem;background:#f0ebe2;border-radius:12px;font-size:15px;color:#6b8c99;line-height:1.8}
 .rr-not-included strong{color:#3d5a65;font-weight:600}
 
-/* LEKTORKA */
 .rr-lektorka-wrap{display:grid;grid-template-columns:420px 1fr;min-height:620px}
 .rr-lektorka-img{object-fit:cover;width:100%;height:100%;display:block;object-position:center top}
 .rr-lektorka-text-wrap{padding:4rem 3rem;background:#f0ebe2;display:flex;flex-direction:column;justify-content:center}
 .rr-credentials{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.75rem}
 .rr-credential{background:#0c3d52;color:#5ab0cc;padding:0.4rem 1rem;border-radius:30px;font-size:12px;letter-spacing:0.5px;font-weight:500}
 
-/* PRICING */
 .rr-price-card{background:rgba(255,255,255,0.05);border:0.5px solid rgba(90,176,204,0.2);border-radius:16px;padding:2rem;margin:2rem 0}
 .rr-price-num{font-family:'League Spartan',sans-serif;font-size:clamp(3.5rem,9vw,5rem);font-weight:800;color:#fff;line-height:1;letter-spacing:-2px}
 .rr-price-per{font-size:15px;color:rgba(255,255,255,0.35);margin-top:0.25rem;margin-bottom:0.5rem}
@@ -102,7 +91,6 @@ html{scroll-behavior:smooth}
 .rr-price-row span:last-child{color:#fff;font-weight:500}
 .rr-price-row.dim{opacity:0.28}
 
-/* FORM */
 .rr-form{margin-top:2.5rem;display:grid;gap:1rem}
 .rr-form-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#5ab0cc;margin-bottom:0.4rem;display:block;font-weight:600}
 .rr-form-input,.rr-form-select,.rr-form-textarea{width:100%;background:rgba(255,255,255,0.06);border:0.5px solid rgba(90,176,204,0.25);border-radius:10px;padding:0.9rem 1.1rem;font-size:16px;color:#fff;font-family:'League Spartan',sans-serif;outline:none;transition:border-color 0.2s}
@@ -116,26 +104,23 @@ html{scroll-behavior:smooth}
 .rr-form-cta{text-align:center;padding-top:0.5rem}
 .rr-form-note{font-size:13px;color:rgba(255,255,255,0.22);margin-top:0.75rem}
 
-/* FAQ */
 .rr-faq-item{border-bottom:0.5px solid rgba(255,255,255,0.07);padding:1.5rem 0}
 .rr-faq-item:first-child{border-top:0.5px solid rgba(255,255,255,0.07)}
 .rr-faq-q{font-size:17px;font-weight:600;color:#fff;margin-bottom:0.6rem}
 .rr-faq-a{font-size:16px;color:rgba(255,255,255,0.55);line-height:1.8;font-weight:300}
 
-/* FOOTER */
 .rr-footer{background:#040f14;padding:3rem 2rem;text-align:center}
 .rr-footer-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-style:italic;color:rgba(255,255,255,0.35);margin-bottom:1rem;font-weight:300}
 .rr-footer-links{font-size:14px;color:rgba(255,255,255,0.28);letter-spacing:0.5px;line-height:2.2}
 .rr-footer-links a{color:#5ab0cc;text-decoration:none}
 
-/* RESPONSIVE */
 @media(max-width:700px){
   .rr-split{grid-template-columns:1fr}
   .rr-split-img{height:300px}
   .rr-lektorka-wrap{grid-template-columns:1fr}
   .rr-lektorka-img{height:420px}
-  .rr-duo{grid-template-columns:1fr}
-  .rr-duo img{height:300px}
+  .rr-trio{grid-template-columns:1fr}
+  .rr-trio img{height:280px}
   .rr-hero-title{font-size:4.5rem;letter-spacing:-2px}
   .rr-hero-title em{font-size:3.8rem}
   .rr-photo-full{height:320px}
@@ -145,9 +130,9 @@ html{scroll-behavior:smooth}
 <body>
 <div class="rr">
 
-<!-- HERO — úvodní fotka -->
+<!-- HERO — fotka 1 -->
 <div class="rr-hero">
-  <img class="rr-hero-img" src="images/IMG_4267.jpg" alt="Tanec pod vodou — freediver mezi korálovými útesy">
+  <img class="rr-hero-img" src="images/1.jpg" alt="Tanec pod vodou — freediver mezi korálovými útesy">
   <div class="rr-hero-overlay"></div>
   <div class="rr-hero-content">
     <p class="rr-hero-eyebrow">Freediving &amp; Jóga · Amed, Bali</p>
@@ -175,8 +160,8 @@ html{scroll-behavior:smooth}
   </div>
 </div>
 
-<!-- AMED PŘI ZÁPADU SLUNCE -->
-<img class="rr-photo-full" src="images/amed.jpg" alt="Amed při západu slunce, Bali">
+<!-- AMED — fotka 2 -->
+<img class="rr-photo-full" src="images/2.jpg" alt="Amed při západu slunce, Bali">
 <div class="rr-tags">
   <span class="rr-tag ocean">🤿 Molchanov Wave 1</span>
   <span class="rr-tag ocean">🧘 Jóga každý den</span>
@@ -189,9 +174,9 @@ html{scroll-behavior:smooth}
   <span class="rr-tag sand">👥 6–10 lidí</span>
 </div>
 
-<!-- FREEDIVING AMED — SPLIT -->
+<!-- FREEDIVING AMED — fotka 3 -->
 <div class="rr-split">
-  <img class="rr-split-img" src="images/SNYD2274.jpg" alt="Freediving Amed škola">
+  <img class="rr-split-img" src="images/3.jpg" alt="Freediving Amed škola">
   <div class="rr-split-text">
     <span class="rr-label light">Partner retreatu</span>
     <h2 class="rr-h2 light">Freediving <em>Amed</em></h2>
@@ -229,10 +214,11 @@ html{scroll-behavior:smooth}
   </div>
 </div>
 
-<!-- POD PROGRAMEM: jóga ve shale + jóga se psem -->
-<div class="rr-duo">
-  <img src="images/AmedAsana2.jpg" alt="Jóga ve shale s výhledem na moře">
-  <img src="images/YogaAndDog.jpg" alt="Jóga se psem">
+<!-- POD PROGRAMEM — fotky 4, 5, 6 -->
+<div class="rr-trio">
+  <img src="images/4.jpg" alt="Program retreatu">
+  <img src="images/5.jpg" alt="Program retreatu">
+  <img src="images/6.jpg" alt="Program retreatu">
 </div>
 
 <!-- QUOTE -->
@@ -259,15 +245,16 @@ html{scroll-behavior:smooth}
   </div>
 </div>
 
-<!-- POD CO JE V CENĚ: bazén + silueta freedivera -->
-<div class="rr-duo">
-  <img src="images/SNYD2455.jpg" alt="Výuka freedivingu v bazénu">
-  <img src="images/1745833473262.jpg" alt="Freediver silueta se sluncem" style="object-position:center center">
+<!-- POD CO JE V CENĚ — fotky 7, 8, 9 -->
+<div class="rr-trio">
+  <img src="images/7.jpg" alt="Retreat Bali">
+  <img src="images/8.jpg" alt="Retreat Bali">
+  <img src="images/9.jpg" alt="Retreat Bali">
 </div>
 
-<!-- LEKTORKA — jedna fotka -->
+<!-- LEKTORKA — fotka 10 -->
 <div class="rr-lektorka-wrap">
-  <img class="rr-lektorka-img" src="images/SunsetYogaDive-Photo-5.jpg" alt="Lenka Rekha — průvodkyně retreatu">
+  <img class="rr-lektorka-img" src="images/10.jpg" alt="Lenka Rekha — průvodkyně retreatu">
   <div class="rr-lektorka-text-wrap">
     <span class="rr-label">Tvá průvodkyně</span>
     <h2 class="rr-h2">Lenka <em>Rekha</em></h2>
@@ -309,10 +296,8 @@ html{scroll-behavior:smooth}
         <div class="rr-price-row dim"><span>Výlety (Nusa Penida, okolí)</span><span>není v ceně</span></div>
       </div>
     </div>
-
     <span class="rr-label light" style="margin-top:2.5rem">Rezervovat místo</span>
     <p style="font-size:16px;color:rgba(255,255,255,0.45);margin-bottom:1rem;font-weight:300">Záloha 40 % při rezervaci · zbývající platba do 1. 8. 2026</p>
-
     <form class="rr-form" action="https://formspree.io/f/mdavpakp" method="POST">
       <div>
         <label class="rr-form-label" for="name">Jméno a příjmení *</label>
