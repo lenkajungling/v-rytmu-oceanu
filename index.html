@@ -75,9 +75,15 @@ html{scroll-behavior:smooth}
 .rr-not-included{margin-top:1.75rem;padding:1.25rem 1.5rem;background:#f0ebe2;border-radius:12px;font-size:15px;color:#6b8c99;line-height:1.8}
 .rr-not-included strong{color:#3d5a65;font-weight:600}
 
-.rr-lektorka-wrap{display:grid;grid-template-columns:420px 1fr;min-height:620px}
-.rr-lektorka-img{object-fit:cover;width:100%;height:100%;display:block;object-position:center top}
-.rr-lektorka-text-wrap{padding:4rem 3rem;background:#f0ebe2;display:flex;flex-direction:column;justify-content:center}
+.rr-lektorka-wrap{padding:5rem 2.5rem;background:#f0ebe2}
+.rr-lektorka-inner{max-width:700px;margin:0 auto;display:grid;grid-template-columns:260px 1fr;gap:3.5rem;align-items:start}
+.portrait-wrap{position:relative}
+.portrait-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;border-radius:4px;display:block}
+.portrait-frame{position:absolute;inset:-12px;border:1.5px solid #9a3e37;border-radius:4px;z-index:0;opacity:0.4;pointer-events:none}
+.portrait-img{position:relative;z-index:1}
+.portrait-name{margin-top:1.25rem;text-align:center}
+.portrait-name strong{display:block;font-size:15px;font-weight:600;color:#061c28;letter-spacing:0.5px}
+.portrait-name span{font-size:12px;color:#6b8c99;letter-spacing:1px;text-transform:uppercase}
 .rr-credentials{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.75rem}
 .rr-credential{background:#0c3d52;color:#5ab0cc;padding:0.4rem 1rem;border-radius:30px;font-size:12px;letter-spacing:0.5px;font-weight:500}
 
@@ -117,8 +123,8 @@ html{scroll-behavior:smooth}
 @media(max-width:700px){
   .rr-split{grid-template-columns:1fr}
   .rr-split-img{height:300px}
-  .rr-lektorka-wrap{grid-template-columns:1fr}
-  .rr-lektorka-img{height:420px}
+  .rr-lektorka-inner{grid-template-columns:1fr}
+  .portrait-wrap{max-width:220px;margin:0 auto}
   .rr-trio{grid-template-columns:1fr}
   .rr-trio img{height:280px}
   .rr-hero-title{font-size:4.5rem;letter-spacing:-2px}
@@ -180,7 +186,9 @@ html{scroll-behavior:smooth}
   <div class="rr-split-text">
     <span class="rr-label light">Partner retreatu</span>
     <h2 class="rr-h2 light">Freediving <em>Amed</em></h2>
-    <p class="rr-body light">Retreat pořádám ve spolupráci s profesionální freedivingovou školou přímo v Amedu. Jejich instruktoři vedou kurz Wave 1 — já se starám o jógu, dech a celkový kontext retreatu. Dohromady tvoříme tým, který tě provede od prvního nádechu až po volný ponor.</p>
+    <p class="rr-body light">Kurz Wave 1 vede profesionální freedivingová škola <a href="https://www.freedivingamed.com/" target="_blank" style="color:#5ab0cc;text-decoration:underline">Freediving Amed</a> — sídlí přímo u pláže a patří k nejlepším školám v celé oblasti. Strávila jsem s nimi dva měsíce ve vodě a vím, že jsou to lidé, kteří to dělají srdcem. Profesionální přístup, uvolněná atmosféra — přesně takový mix, který dává freedivingu smysl.</p>
+    <p class="rr-body light" style="margin-top:1rem">Kurz probíhá v angličtině — já jsem přítomna jako průvodkyně a překládám do češtiny, takže jazyková bariéra není překážka.</p>
+    <a href="https://www.freedivingamed.com/" target="_blank" style="display:inline-block;margin-top:1.5rem;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#5ab0cc;text-decoration:none;font-weight:600;border-bottom:1px solid rgba(90,176,204,0.4);padding-bottom:2px">freedivingamed.com →</a>
   </div>
 </div>
 
@@ -252,27 +260,36 @@ html{scroll-behavior:smooth}
   <img src="images/9.jpg" alt="Retreat Bali">
 </div>
 
-<!-- LEKTORKA — fotka 10 -->
+<!-- LEKTORKA — fotka 10 portrétová -->
 <div class="rr-lektorka-wrap">
-  <img class="rr-lektorka-img" src="images/10.jpg" alt="Lenka Rekha — průvodkyně retreatu">
-  <div class="rr-lektorka-text-wrap">
-    <span class="rr-label">Tvá průvodkyně</span>
-    <h2 class="rr-h2">Lenka <em>Rekha</em></h2>
-    <div class="rr-divider"></div>
-    <div class="rr-body">
-      <p>Skoro deset let učím jógu. Učila jsem se jógovou terapii od Sonal Chaudhari, studentky Kobada Variavy — přímého žáka B.K.S. Iyengara. Celý život tančím a kreativní pohyb je mi stejně blízký jako ticho na podložce.</p>
-      <p>Význam dechu jsem si naplno uvědomila až s freedivingem. Kvalita bytí pod hladinou je přímo úměrná tomu, jak klidná jsi na hladině — a tohle platí daleko za hranice vody. Skoro před třemi lety jsem se ocitla v těžkém období svého života. Freediving na Filipínách mi pomohl najít cestu zpátky k sobě samé. Od té doby ho neoddělitelně propojuji s prací s dechem — ve vodě i na souši.</p>
-      <p>Tanec pod vodou pro mě není disciplína. Je to nejpřirozenější vyjádření toho, co se děje uvnitř, když se konečně uvolníš.</p>
-      <p>Vím, jak chutná hloubka — fyzická i ta vnitřní. A vím, že nejkrásnější okamžiky pod vodou přicházejí tehdy, když přestaneš mít vše pod kontrolou a uvolníš se.</p>
+  <div class="rr-lektorka-inner">
+    <div class="portrait-wrap">
+      <img class="portrait-img" src="images/10.jpg" alt="Lenka Rekha — průvodkyně retreatu">
+      <div class="portrait-frame"></div>
+      <div class="portrait-name">
+        <strong>Lenka Rekha</strong>
+        <span>Jüngling</span>
+      </div>
     </div>
-    <div class="rr-credentials">
-      <span class="rr-credential">AIDA 4</span>
-      <span class="rr-credential">~10 let jógy</span>
-      <span class="rr-credential">Jógová terapie</span>
-      <span class="rr-credential">Iyengar inspirace</span>
-      <span class="rr-credential">Intuitivní masáž</span>
-      <span class="rr-credential">Tanečnice</span>
-      <span class="rr-credential">Breath guide</span>
+    <div>
+      <span class="rr-label">Tvá průvodkyně</span>
+      <h2 class="rr-h2">Lenka <em>Rekha</em></h2>
+      <div class="rr-divider"></div>
+      <div class="rr-body">
+        <p>Skoro deset let učím jógu. Učila jsem se jógovou terapii od Sonal Chaudhari, studentky Kobada Variavy — přímého žáka B.K.S. Iyengara. Celý život tančím a kreativní pohyb je mi stejně blízký jako ticho na podložce.</p>
+        <p>Význam dechu jsem si naplno uvědomila až s freedivingem. Kvalita bytí pod hladinou je přímo úměrná tomu, jak klidná jsi na hladině — a tohle platí daleko za hranice vody. Skoro před třemi lety jsem se ocitla v těžkém období svého života. Freediving na Filipínách mi pomohl najít cestu zpátky k sobě samé. Od té doby ho neoddělitelně propojuji s prací s dechem — ve vodě i na souši.</p>
+        <p>Tanec pod vodou pro mě není disciplína. Je to nejpřirozenější vyjádření toho, co se děje uvnitř, když se konečně uvolníš.</p>
+        <p>Vím, jak chutná hloubka — fyzická i ta vnitřní. A vím, že nejkrásnější okamžiky pod vodou přicházejí tehdy, když přestaneš mít vše pod kontrolou a uvolníš se.</p>
+      </div>
+      <div class="rr-credentials">
+        <span class="rr-credential">AIDA 4</span>
+        <span class="rr-credential">~10 let jógy</span>
+        <span class="rr-credential">Jógová terapie</span>
+        <span class="rr-credential">Iyengar inspirace</span>
+        <span class="rr-credential">Intuitivní masáž</span>
+        <span class="rr-credential">Tanečnice</span>
+        <span class="rr-credential">Breath guide</span>
+      </div>
     </div>
   </div>
 </div>
@@ -281,23 +298,50 @@ html{scroll-behavior:smooth}
 <div class="rr-section deep" id="rezervace">
   <div class="rr-inner">
     <span class="rr-label light">Investice</span>
+    <h2 class="rr-h2 light">Přehled <em>plateb</em></h2>
+    <p class="rr-body light" style="margin-bottom:2rem">Platby probíhají odděleně — každá přímo poskytovateli služby. Nejsem cestovní kancelář, jsem lektorka a koordinátorka retreatu. Tento model ti zajišťuje přímý smluvní vztah s každým poskytovatelem.</p>
+
     <div class="rr-price-card">
-      <div class="rr-price-num">38 000 Kč</div>
-      <div class="rr-price-per">na osobu</div>
-      <div class="rr-price-cap">Kapacita min. 6 · max. 10 míst</div>
       <div class="rr-price-rows">
-        <div class="rr-price-row"><span>Ubytování 9 nocí se snídaní</span><span>✓</span></div>
-        <div class="rr-price-row"><span>Kurz Molchanov Wave 1 + certifikace</span><span>✓</span></div>
-        <div class="rr-price-row"><span>Lekce jógy a dechu každý den</span><span>✓</span></div>
-        <div class="rr-price-row"><span>Tanec pod vodou</span><span>✓</span></div>
-        <div class="rr-price-row"><span>Transfer z/na letiště</span><span>✓</span></div>
-        <div class="rr-price-row"><span>Pronájem shaly + rituály</span><span>✓</span></div>
+        <div class="rr-price-row">
+          <span>🧘 Lektorské služby — jóga, dech, tanec pod vodou, koordinace, rituály, pronájem shaly</span>
+          <span>23 000 Kč</span>
+        </div>
+        <div class="rr-price-row">
+          <span>🏨 Ubytování 9 nocí se snídaní — <a href="https://amed-paradise-beach-club.all-balihotels.net/en/" target="_blank" style="color:#5ab0cc">Amed Paradise Beach Club</a></span>
+          <span>7 000 Kč</span>
+        </div>
+        <div class="rr-price-row">
+          <span>🤿 Kurz Molchanov Wave 1 + certifikace — <a href="https://www.freedivingamed.com/" target="_blank" style="color:#5ab0cc">Freediving Amed</a></span>
+          <span>5 940 Kč</span>
+        </div>
+        <div class="rr-price-row">
+          <span>🚐 Transfer letiště Denpasar → Amed → letiště</span>
+          <span>2 000 Kč</span>
+        </div>
+        <div class="rr-price-row" style="border-top:1px solid rgba(90,176,204,0.3);margin-top:0.5rem;padding-top:0.75rem">
+          <span style="color:#fff;font-weight:600">Celkem orientačně</span>
+          <span style="color:#5ab0cc;font-weight:700;font-size:1.2rem">37 940 Kč</span>
+        </div>
         <div class="rr-price-row dim"><span>Letenky, vízum, pojištění</span><span>není v ceně</span></div>
-        <div class="rr-price-row dim"><span>Výlety (Nusa Penida, okolí)</span><span>není v ceně</span></div>
+        <div class="rr-price-row dim"><span>Výlety (Nusa Penida, okolí) — platba na místě</span><span>není v ceně</span></div>
       </div>
     </div>
+
+    <div style="background:rgba(90,176,204,0.08);border:0.5px solid rgba(90,176,204,0.2);border-radius:12px;padding:1.5rem;margin:2rem 0">
+      <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.8"><strong style="color:#5ab0cc;display:block;margin-bottom:0.5rem">Jak platby probíhají:</strong>
+      Po potvrzení účasti ti zašlu kontakty a instrukce pro každou platbu zvlášť. Ubytování hradíš přímo resortu <a href="https://amed-paradise-beach-club.all-balihotels.net/en/" target="_blank" style="color:#5ab0cc">Amed Paradise Beach Club</a>, kurz Wave 1 přímo škole <a href="https://www.freedivingamed.com/" target="_blank" style="color:#5ab0cc">Freediving Amed</a>, transfer a moje lektorské služby mně. Doporučuji sjednat cestovní pojištění zahrnující storno a zdravotní péči v zahraničí.</p>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.04);border-radius:12px;padding:1.5rem;margin-bottom:2rem">
+      <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.8"><strong style="color:rgba(255,255,255,0.8);display:block;margin-bottom:0.75rem">Podmínky účasti</strong>
+      Retreat se koná při minimálně 6 přihlášených. Pokud počtu nedosáhneme, lektorský honorář vrátím v plné výši — ubytování a kurz řeší každý přímo s příslušným poskytovatelem dle jejich storno podmínek.<br><br>
+      Organizuji retreat jako lektorka a koordinátorka na základě živnostenského oprávnění (lektorská činnost, organizace akcí). Nejsem cestovní kancelář ve smyslu zákona č. 159/1999 Sb. Každý účastník má přímý smluvní vztah s poskytovatelem ubytování a freedivingovou školou.<br><br>
+      Doporučuji sjednat cestovní pojištění zahrnující storno, zdravotní péči a odpovědnost za škodu. Na vyžádání doporučím pojišťovnu.</p>
+    </div>
+
     <span class="rr-label light" style="margin-top:2.5rem">Rezervovat místo</span>
-    <p style="font-size:16px;color:rgba(255,255,255,0.45);margin-bottom:1rem;font-weight:300">Záloha 40 % při rezervaci · zbývající platba do 1. 8. 2026</p>
+    <p style="font-size:16px;color:rgba(255,255,255,0.45);margin-bottom:1rem;font-weight:300">Záloha za lektorské služby 40 % při rezervaci · zbývající platba do 1. 8. 2026</p>
     <form class="rr-form" action="https://formspree.io/f/mdavpakp" method="POST">
       <div>
         <label class="rr-form-label" for="name">Jméno a příjmení *</label>
